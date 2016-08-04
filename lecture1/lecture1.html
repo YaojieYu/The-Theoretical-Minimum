@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Theorical Minimum</title>
-<!-- 2016-08-04 Thu 08:45 -->
+<!-- 2016-08-04 Thu 17:20 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="于要杰" />
@@ -134,21 +134,80 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
 </head>
 <body>
 <div id="content">
 <h1 class="title">Theorical Minimum</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. 经典物理的本质</a>
+<ul>
+<li><a href="#sec-1-1">1.1. 什么是经典物理?</a></li>
+<li><a href="#sec-1-2">1.2. 简单动力系统和相空间</a></li>
+<li><a href="#sec-1-3">1.3. 不被允许的规律:负一定律</a></li>
+<li><a href="#sec-1-4">1.4. 无穷个状态的动力系统</a></li>
+<li><a href="#sec-1-5">1.5. 循环和守恒律</a></li>
+<li><a href="#sec-1-6">1.6. 精度的极限</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">经典物理的本质</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> 经典物理的本质</h2>
 <div class="outline-text-2" id="text-1">
 <blockquote>
 <p>
-<b>在Steinbeck country的某个地方,两位退休的老人坐在路边.Lenny用他手指梳着头发说,"给我讲讲物理学的法则吧,George".George低头沉思片刻,然后透过眼镜片的顶部看着Lenny说,"OK,Lenny,但只是最核心的.</b>
+在Steinbeck country的某个地方,两位退休的老人坐在路边.Lenny用他手指梳着头发说,"给我讲讲物理学的法则吧,George".George低头沉思片刻,然后透过眼镜片的顶部看着Lenny说,"OK,Lenny,但只是最核心的.  
 </p>
 </blockquote>
 </div>
 <div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">什么是经典物理?</h3>
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 什么是经典物理?</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 经典物理这个术语的含义指在量子力学之前的所有物理.经典物理包括物体运动的牛顿定律,麦克斯韦和法拉第的电磁场理论以及爱因斯坦的广义相对论.但它不仅只是针对特定物理现象的一些理论;它是一系列原理和法则的集合,是一种逻辑,这种逻辑支配着现实世界中那些量子不确定性无足轻重的那部分现象.这些通用的法则称为经典物理.
@@ -158,9 +217,11 @@ for the JavaScript code in this tag.
 经典物理的任务是对未来的预测.十八世纪伟大的物理学家拉普拉斯将其表述如下:
 </p>
 
+<blockquote>
 <p>
-<b>我们可以把目前宇宙的状态看作是它过去的结果以及它未来的起因.如果有一个智者,他知道某一时刻施加于运动上所有的力和所有物体的位置.而且这个智者有无穷的力量将这些数据分析.那么他最终将得到一个能统摄宇宙极大之物和极小原子的运动公式.对于这个智者来说,未来的一切都是确定的,就如同过去的历史一样,被清晰的展现在眼前.</b>
+<span class="underline">我们可以把目前宇宙的状态看作是它过去的结果以及它未来的起因.如果有一个智者,他知道某一时刻施加于运动上所有的力和所有物体的位置.而且这个智者有无穷的力量将这些数据分析.那么他最终将得到一个能统摄宇宙极大之物和极小原子的运动公式.对于这个智者来说,未来的一切都是确定的,就如同过去的历史一样,被清晰的展现在眼前.</span>      
 </p>
+</blockquote>
 
 <p>
 在经典物理中,如果你知道了系统某一时刻的所有信息,并且知道了描述该系统运动的方程,那么你就能预测这个系统的未来.这就是所谓的经典物理的法则-确定性.如果我们知道所有同样的信息,但将过去和未来反转一下,然后根据同样的方程,你能够获得关于过去的全部信息.这样的一个系统又是可逆的.
@@ -168,7 +229,7 @@ for the JavaScript code in this tag.
 </div>
 </div>
 <div id="outline-container-sec-1-2" class="outline-3">
-<h3 id="sec-1-2">简单动力系统和相空间</h3>
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> 简单动力系统和相空间</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 我们把一系列物体的集合,无论物体是粒子,场,波还是其他任何东西,都可以叫做一个系统.一个系统要么是整个宇宙,要么是与其余任何物体孤立并不受其影响的孤立系统.
@@ -188,7 +249,6 @@ for the JavaScript code in this tag.
 </p>
 <p><span class="figure-number">Figure 1:</span> The space of two states.</p>
 </div>
-
 
 <p>
 在经典力学中,我们假设系统随时间光滑的演化,其中没有间断和跳跃.我们称这种方式是连续的.显然,在这个例子中,系统的运行不是连续的,而是离散的.此时假设系统的离散的时间步以整数表示.
@@ -218,7 +278,6 @@ figure3是第二个规则的示意图,其中箭头从H到T,或者从T到H.此时
 </p>
 
 
-
 <div class="figure">
 <p><img src="./figure/figure3.png" alt="figure3.png" />
 </p>
@@ -226,7 +285,7 @@ figure3是第二个规则的示意图,其中箭头从H到T,或者从T到H.此时
 </div>
 
 <p>
-我们甚至可以将动力规则写成方程的形式.用来描述系统的变量的个数称为系统的自由度(degrees of freedom).此时的系统只有一个自由度,我们可以使用一个希腊字母 &sigma; 表示. &sigma; 只有两种可能的值:&sigma; = 1 或者 &sigma; = -1,相应地,分别表示H和T.同时,需要一个符号来记录时间.当系统随时间连续变化时,我们以t表示.此处,我们的系统是离散的,用n来代替.系统在n时刻的状态以&sigma;(n)表示,意思是n时刻的状态为&sigma;.
+我们甚至可以将动力规则写成方程的形式.用来描述系统的变量的个数称为系统的自由度(degrees of freedom).此时的系统只有一个自由度,我们可以使用一个希腊字母 \(\sigma\) 表示. \(\sigma\) 只有两种可能的值: \(\sigma = 1\)  或者 \(\sigma = -1\) ,相应地,分别表示H和T.同时,需要一个符号来记录时间.当系统随时间连续变化时,我们以t表示.此处,我们的系统是离散的,用n来代替.系统在n时刻的状态以 \(\sigma(n)\) 表示,意思是n时刻的状态为 \(\sigma\).
 </p>
 
 <p>
@@ -234,7 +293,7 @@ figure3是第二个规则的示意图,其中箭头从H到T,或者从T到H.此时
 </p>
 
 <p>
-&sigma;(n+1) = &sigma;(n).
+$$\sigma(n+1) = \sigma(n).$$
 </p>
 
 <p>
@@ -246,7 +305,7 @@ figure3是第二个规则的示意图,其中箭头从H到T,或者从T到H.此时
 </p>
 
 <p>
-&sigma;(n+1)=&sigma;(n)
+$$\sigma(n+1)=\sigma(n).$$
 </p>
 
 <p>
@@ -265,12 +324,12 @@ figure3是第二个规则的示意图,其中箭头从H到T,或者从T到H.此时
 此时,我们有许许多多可能的规则,这些规则可能很难使用语言甚至方程描述.最简单的方法就是将其用像图5一样的示意图来表示.图5给出了n时刻骰子的状态数值,在下一个时刻n+1,状态的值也会增加一个单位.系统一这种方式运行直达到达状态6,在次状态下,示意图告诉我们,下一状态将回到1,并且不断重复该模式.这种没有结束的模式被称为循环(cycle).例如,我们从3开始,则未来的状态是3,4,5,6,1,2,3,4,5,6,1,2&#x2026;.将这种模式为动力规则一.
 </p>
 
+
 <div class="figure">
 <p><img src="./figure/figure4.png" alt="figure4.png" />
 </p>
 <p><span class="figure-number">Figure 4:</span> A six-state system.</p>
 </div>
-
 
 
 <div class="figure">
@@ -317,7 +376,7 @@ figure3是第二个规则的示意图,其中箭头从H到T,或者从T到H.此时
 </div>
 
 <div id="outline-container-sec-1-3" class="outline-3">
-<h3 id="sec-1-3">不被允许的规律:负一定律</h3>
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> 不被允许的规律:负一定律</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 根据经典物理的定律,并不是所有的规则都是允许的.一个动力系统的动力规则不仅要是确定的;它还需要是可逆的.
@@ -363,7 +422,7 @@ figure3是第二个规则的示意图,其中箭头从H到T,或者从T到H.此时
 </div>
 </div>
 <div id="outline-container-sec-1-4" class="outline-3">
-<h3 id="sec-1-4">无穷个状态的动力系统</h3>
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> 无穷个状态的动力系统</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 目前为止,所有的例子都是状态空间只有有限个状态的情况.但是没有理由我们不能拥有一个无穷多状态的系统.例如,想象一条线,其上有无穷多个离散的点,就像一条两端都有无穷个车站的铁轨.为了描述这个系统,我们对车站进行编号,就像之前对时间做的那样.由于使已经用了n作为时间的标记,我们使用一个大写的N作为状态的标记.所有的这些标记构成一个函数N(n),告诉n时刻的状态是N.图11给出系统的示意图.
@@ -392,7 +451,7 @@ figure3是第二个规则的示意图,其中箭头从H到T,或者从T到H.此时
 </p>
 
 <p>
-N(n+1) = N(n) + 1
+$$N(n+1) = N(n) + 1$$
 </p>
 
 <p>
@@ -400,19 +459,19 @@ N(n+1) = N(n) + 1
 </p>
 
 <p>
-N(n+1)=N(n)-1
+$$N(n+1)=N(n)-1$$
 </p>
 
 <p>
-N(n+1)=N(n)+2
+$$N(n+1)=N(n)+2$$
 </p>
 
 <p>
-N(n+1)=N(n)<sup>2</sup>
+$$N(n+1)=N(n)^{2}$$
 </p>
 
 <p>
-N(n+1)=-1<sup>N(n)</sup>N(n)
+$$N(n+1)=-1^{N(n)}N(n)$$
 </p>
 
 <p>
@@ -437,7 +496,7 @@ N(n+1)=-1<sup>N(n)</sup>N(n)
 </div>
 
 <div id="outline-container-sec-1-5" class="outline-3">
-<h3 id="sec-1-5">循环和守恒律</h3>
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> 循环和守恒律</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 当相空间被分成不同的循环的时候,系统仍然保持循环开始.每个循环都有其动力规则,但他们都是同一个状态空间的部分,因为它们描述的是同一状态空间.考虑如下有三个循环的系统.每个状态1和状态2都属与它各自的循环,同时状态3和状态4属与第三个(如图14).
@@ -467,7 +526,7 @@ N(n+1)=-1<sup>N(n)</sup>N(n)
 </div>
 </div>
 <div id="outline-container-sec-1-6" class="outline-3">
-<h3 id="sec-1-6">精度的极限</h3>
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> 精度的极限</h3>
 <div class="outline-text-3" id="text-1-6">
 <p>
 拉普拉斯对于世界的可预测性过于乐观,即使是对经典物理.他肯定会同意对未来的预测需要对统治现实世界的动力学定律有完整的了解,同时也需要无穷的计算能力,他称这种能力为"为分析提供大量数据的无穷智能".但是,他仍然低估了另外一个重要的部分-能够获得足够精度的初始条件的能力.想象一个有一百万面的骰子,给每个面都涂上足够接近但却有微小差异的单精度整数.如果一个人已知道骰子的运动规律,并且确定了骰子初始时刻的数字,那他就能够预测未来时刻骰子的状态.但是如果拉普拉斯的"无穷智能"遇到了一点视觉模糊,以至于不能辨别骰子不同面的细微区别,那么他的预测能力将会受到限制.
@@ -482,7 +541,7 @@ N(n+1)=-1<sup>N(n)</sup>N(n)
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: 于要杰</p>
-<p class="date">Created: 2016-08-04 Thu 08:45</p>
+<p class="date">Created: 2016-08-04 Thu 17:20</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"></p>
 </div>
