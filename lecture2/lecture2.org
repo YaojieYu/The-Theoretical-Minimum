@@ -1,5 +1,5 @@
 #+LATEX_CLASS: ltxdockit
-#+TITLE:Theorical Minimum
+#+TITLE:Lecture 2
 #+AUTHOR:YaojieYu
 #+STARTUP:hidestars
 #+OPTIONS: H:4 toc:2 ^:{}

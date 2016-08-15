@@ -1,6 +1,6 @@
 #+LATEX_CLASS: ltxdockit
-#+TITLE:Theorical Minimum
-#+AUTHOR:于要杰
+#+TITLE:Lecture 1
+#+AUTHOR:YaojieYu
 #+STARTUP:hidestars
 #+OPTIONS: H:4 toc:2 ^:{}
 #+EMAIL:yuyaojie1234@gmail.com
