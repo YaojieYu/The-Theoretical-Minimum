@@ -1,0 +1,9 @@
+#+TITLE:Lecture 3
+#+AUTHOR:YaojieYu
+#+STARTUP:hidestars
+#+LATEX_CLASS: ltxdockit
+#+OPTIONS: H:4 toc:2 ^:{}
+#+HTML_MATHJAX: align: left indent: 5em tagside: left font: Neo-Euler
+* 动力学
+* 序曲三: 偏微分
+

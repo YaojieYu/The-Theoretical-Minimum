@@ -1,0 +1,149 @@
+#+LATEX_CLASS: ltxdockit
+#+TITLE:Interlude 1
+#+AUTHOR:YaojieYu
+#+STARTUP:hidestars
+#+OPTIONS: H:4 toc:2 ^:{}
+#+EMAIL:yuyaojie1234@gmail.com
+* 序曲一:空间,三角学和向量
+  #+BEGIN_QUOTE
+  "George,我们在哪里?"
+
+  George抽出地图并缓缓地把它铺在Lenny面前."我们就在这里,Lenny,坐标是36.60709N,-121.618652W."
+  "嗯? 什么是坐标,George?"
+  #+END_QUOTE
+** 坐标
+
+   为了量化点的位置,我们需要一个坐标系统.构造一个坐标系统从选择空间中的一个原点开始.有时原点的选择可以是方程变的很简单.例如,如果我们把原点取为除了原点外的其他地方的话,那么太阳系统的理论就会看起来更加复杂.严格地说,原点的位置是任意的,即可以放在任意一个地方,但是,原点的位置一旦选定,就不能变化了.
+
+   下一步是选择三个相互垂直的坐标轴.这里坐标轴的位置也是任意的,只要他们相互垂直就好. 这些轴通常被叫做 $x$ , $y$ , 和 $z$ ,但是我们也可以 $x_{1}$ ,$x_{2}$ 和 $x_{3}$ 表示. 这样一个坐标轴的系统叫做笛卡尔坐标, 如图一所示.
+
+   #+CAPTION: A three-dimensional Cartesian coordinate system.
+   [[./Interlude_figure/figure1.png]]
+
+   我们想描述空间中的一点, $P$ . 它能够通过坐标轴的 $x$ , $y$ 和 $z$ 分量进行定位. 换句话说,我们可以通过有序的数对 $(x,y,z)$ 来识别出 $P$ (如图二).
+
+   #+CAPTION: A point in Cartesian space.
+   [[./Interlude_figure/figure2.png]]
+
+   $x$ 分量代表 $P$ 到 $x=0$ 这一平面(如图三)的垂直距离.  $y$ 和 $z$ 分量也有类似的含义. 由于坐标分量代表着距离,因此他们以长度的单位度量,比如米.
+
+   #+CAPTION:A plane defined by setting $x = 0$ , and the distance to $P$ along the $x$ axis.
+   [[./Interlude_figure/figure3.png]]
+
+   当我们研究运动的时候,我们也需要记录时间. 这里,我们也从一个原点开始-时间为0. 我们可以选择大爆炸的时刻作为原点, 也可以选择耶稣诞生时作为原点,还可以仅仅是我们实验开始的时间. 但一旦选择了,就不能更改了.
+
+   下一步是选择时间的方向. 通常情况下,我们把未来的方向为看做正方向,而过去的为负. 当然还有其他的方法,但我们这里不会用它们.
+
+   最后,我们需要时间的单位.秒是物理学家最熟悉的单位,当然小时和纳秒甚至年都是可以的. 只有我们选定了原点和单位,我们才能够使用一个数 $t$ 来表示任意时间.
+
+   在经典物理中,有两个关于时间的隐含假设. 第一个是时间是均与流逝的-即一个1秒的时间间隔和其他的1秒间隔是完全相同的. 例如,把一个物体从比萨斜塔下落,伽利略做这个实验的时间和我们今天做这个的时间是一样长的. 过去的一秒和现在的一秒是一样的.
+
+   另一个关于时间的假设是,不同位置的时间是可以比较的. 这意味这不同时刻的时钟是同步的. 有了这些假设, 四个坐标分量- $x,y,z,t$ ,就定义了一个参考坐标系(reference frame). 这个参考坐标系中的任意事件都必须对其四个分量赋值.
+
+   给定一个函数 $f(t) = t^{2}$ , 我们可以画出它在坐标系中的点. 我们用一个轴表示时间 $t$ , 另外一个表示函数, $f(t)$ (如图四).
+
+   #+CAPTION:　Plotting the points of　$f(t) = t^{2}$　．
+   [[./Interlude_figure/figure4.png]]
+
+   也可以把这些空间中的点连接起来(如图五).
+
+   #+CAPTION: Joining the plotted points with curves.
+   [[./Interlude_figure/figure5.png]]
+
+** 三角学
+
+   如果你没有学过三角学,或者以前学过但现在有点模糊,那么这一节就是为你准备的.
+
+   在物理学中,我们会经常使用三角学.因此,你需要熟悉它的内容,符号和运算方法. 在物理学中,我们不经常用度数表示角度.我们用弧度(radian)来表示;当我们说 $ 2 \pi$ 的时候是指360°, 或者1radian= $\pi/180°$ , 也就是说 90° = $\pi /2 $ radians, 30° = $\pi/6$ radians. 因此1 radian大约57°(如图六).
+
+   三角函数是以右角来定义的. 图七给出了一个右角的示意图, 有它的斜边 $c$ , 底边 $b$, 和高度 $a$ . 希腊字母 $\theta$ ,表示和高度相对的角, 字母 $\phi$ 表示和底边相对的角.
+
+   #+CAPTION: The radian as the angle subtended by an arc equal to the radius of the circle.
+   [[./Interlude_figure/figure6.png]]
+
+   #+CAPTION: A right triangle with segments and angles indicated.
+   [[./Interlude_figure/figure7.png]]
+
+   我们使用如下各个边之间的比例关系来定义定义函数 sine(sin), cosine(cos)和tangent(tan):
+
+   $$sin \theta = \frac{a}{c}$$
+   $$cos \theta = \frac{b}{c}$$
+   $$tan \theta = \frac{a}{b} = \frac{sin \theta}{ cos \theta}.$
+
+   我们可以使用图形表示这些函数的变化趋势(如图八到十).
+
+   #+CAPTION: Graph of the sine function.
+   [[./Interlude_figure/figure8.png]]
+
+   
+   #+CAPTION: Graph of the cosine function.
+   [[./Interlude_figure/figure9.png]]
+
+
+   #+CAPTION: Graph of the  tangent function.
+   [[./Interlude_figure/figure10.png]]
+
+   关于三角函数这里有一些有用的性质.第一个是我们可以在一个圆内画一个三角,圆心位于笛卡尔坐标系的原点(如图11所以).
+
+   #+CAPTION: A right triangle drawn in a circle.
+   [[./Interlude_figure/figure11.png]]
+
+   这里连接圆心到圆上任意一点的线是某个三角形的斜边,这一点的水平和垂直分量分别是这个三角形的底边和高.这个点的位置可以 $x$ 和 $y$ 的坐标给定,既
+
+   $$x = c cos \theta$$
+
+   和
+
+   $$y = c sin \theta$$
+
+   这是一个关于右三角和圆非常有用的性质.
+
+   假设一个特定的角度 $\theta$ ,它是某两个角 $\alpha$ 和 $\beta$ 的和或差, 既 $\theta = \alpha \pm \beta$ . 那么 $\alpha \pm \beta$ 的三角函数就可以用 $\alpha$ 和 $\beta$ 的三角函数来表示.
+
+   $$sin( \alpha + \beta) = sin \alpha cos \beta + cos \alpha sin \beta$$
+   $$sin( \alpha - \beta) = sin \alpha cos \beta - cos \alpha sin \beta$$
+   $$cos( \alpha + \beta) = cos \alpha cos \beta - sin \alpha sin \beta$$
+   $$cos( \alpha - \beta) = cos \alpha cos \beta + sin \alpha sin \beta$$
+
+   最后,一个非常有用的公式是
+
+   $$sin^{2} \theta + cos^{2} \theta = 1.$$
+
+   (注意这里的记号: $sin^{2}\theta = sin \theta sin \theta$). 这个公式是毕达哥拉斯定理的另一种形式.如果我们选择图11中的圆的半径为1, 那么边长 $a$ 和 $b$ 是角 \theta 的正弦和余弦,并且斜边为1.上述方程 $a^{2}+b^{2} = c^{2}$ 是等价的.
+
+** 矢量
+   矢量的知识是另外一个我们假定你已经学过的数学知识. 但在这里还是简单的回顾一下三维空间-这是我们最常用的.
+
+   一个矢量是空间中既有大小又有方向的量. 位移就是矢量的一个例子.  如果一个质点从某一个位置出发,只知道它移动的距离是不够的,好需要知道它移动的方向. 位移是矢量最简单的例子. 在图形中,矢量使用一个带有长度和方向的箭头表示,如图12.
+
+   
+   #+CAPTION: A vector $\vec{r}$ in Cartesian coordinates.
+   [[./Interlude_figure/figure12.png]]
+
+   矢量使用上面加箭头的符号表示. 因此位移的符号是 $\vec{r}$ . 矢量的幅值或期长度使用绝对值的符号表示. 因此位移的长度记为 $|\vec{r}|$ .
+
+   对于矢量可以进行一些操作. 首先, 可以使用一个实数与矢量之相乘.当处理矢量的时候,你会经常看到这样的以标量命名的实数.乘以一个正实数仅仅是将矢量的长度增加几倍.当然,你也可以乘以一个负实数,这样会逆转矢量的方向.比如 $-2 \vec{r}$ 是长度为向量 $\vec{r}$ 两倍,方向与之相反的矢量.
+
+   矢量可以相加. 为了使矢量 $\vec{A}$ 和 $\vec{B}$ 相加, 可以使用如图13中的平行四边形法则. 两个矢量的和是以这两个矢量构成的平行四边形的对角.
+
+   #+CAPTION: Adding vectors.
+   [[./Interlude_figure/figure13.png]]
+
+   如果矢量能够相加并且能被负的标量相乘,那么它们也可以做减法.
+
+   矢量也可以使用分量的形式表示.我们从相互垂直的坐标系 $x$, $y$ 和 $z$ 开始. 下一步,我们在坐标轴上定义长度为单位长度的的单位矢量.这些沿着坐标轴的单位矢量被称为基矢量. 我们通常称这些基矢量为 $\hat{x}$ , $\hat{y}$ 和 $\hat{z}$ (如图14), 其中符号 $^$  是基矢量的标志. 基矢量是有用的,因为任意的矢量都可以以如下方式写成以基矢量表示的形式:
+
+   $$\vec{V} = V_{x} \hat{i} + V_{y} \hat{j} + V_{z} \hat{k}.$$
+
+   #+CAPTION: Basis vectors for a Cartesian coordinate system.
+   [[./Interlude_figure/figure14.png]]
+
+   $V_{x}$ , $V_{y}$ 和 $V_{z}$ 是将基矢量相加得到 $\vec{V}$ 的系数. 它们也叫做 $\vec{V}$ 的分量. 我们可以把上面的方程称为一个基矢量的一个线性组合. 矢量分量可以是正的或者负的. 我们也可是将矢量写成其分量列的形式- $(V_{x},V_{y},V_{z})$ . 矢量的长度可以用其分量有三维的毕达哥拉斯定理得到.
+
+   $$|\vec{V}| = \sqrt{V_{x}^{2} + v_{y}^{2} + V_{z}^{2}}$$
+
+   $$$$.
+   
+   
+
+   

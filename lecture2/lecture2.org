@@ -4,10 +4,9 @@
 #+STARTUP:hidestars
 #+OPTIONS: H:4 toc:2 ^:{}
 #+HTML_MATHJAX: align: left indent: 5em tagside: left font: Neo-Euler
-* 运动
+* 运动学
   #+BEGIN_QUOTE
   Lenny抱怨说:"George, 这种阶跃的方式让我感到紧张.我们的时间真是以这种跳跃的方式运行吗? 我希望一切可以更流畅一些."
-
   George想了一会儿,把黑板擦干净,说道,"好的,Lenny, 今天就让我们来学习那些连续变化的系统."
   #+END_QUOTE
 ** 数学序曲:微分学
@@ -305,4 +304,5 @@ $$\frac{df}{dt}=\frac{df}{dg}\frac{dg}{dt}. $$
 
   
   
-   
+
+* 序曲二:积分学
